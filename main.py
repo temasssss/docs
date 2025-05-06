@@ -46,7 +46,7 @@ async def analyze(file: UploadFile = File(...)):
 
     # call Groq (Mixtral) API
     response = openai.ChatCompletion.create(
-        model="mixtral-8x22b",
+        model="compound-beta",
         messages=[
             {"role": "system", "content": "You are a legal assistant. Provide a concise analysis of the following rental agreement."},
             {"role": "user", "content": extracted_text}
